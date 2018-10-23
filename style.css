@@ -1,0 +1,43 @@
+div {
+        border: 2px solid black;
+}
+
+#layout {
+        width: 1750px;
+        height: 1000px;
+
+}
+
+#title, #controls, #infobar {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+}
+
+#title {
+        text-align: center;
+        height: 50px;
+    border: none;
+    font-size: 20px;
+}
+
+#visualization {
+        width: 750px;
+        height: 500px;
+        float: left;
+        border-top: 0;
+        border-bottom: 0;
+        text-align: center;
+    border-right: 0px;
+    position: absolute;
+}
+
+#controls {
+        width: 325epx;
+        height:600px;
+        position: fixed;
+        right: 20px;
+        background: rgba(255,255,255,0.7);
+}
+#btn_hidden{
+    /*display: none;*/
+}

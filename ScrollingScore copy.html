@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style>
+  svg {
+  	width: 1200px;
+  	height: 1000px;
+  }
+  .axis text{
+    font-family: calibri;
+    font-size: 10px;
+    fill: #c5050c;
+    }
+    
+</style>
+
+<body>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+   <script language="javascript" type="text/javascript" src="p5.js"></script>
+  <script language="javascript" src="p5.dom.js"></script>
+  <script language="javascript" src="p5.sound.js"></script>
+
+
+
+
+<div id="layout">
+  
+    <div id="title">
+        <p> PlayerPiano </p>
+    </div>
+
+    <div id="visualization">
+         
+         <div id="controls">
+          <!--create the dropdown label here-->
+                <label for="type">Select a song <br>
+                and filter by midi range and note:</label>
+                <input type="text" id="mytype" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                <br>
+                                        <!--create the sliders here (with labels to show the selected range)-->
+               <div id="interaction">
+                    <!--create the song dropdown here-->
+                    <p>Song Selection</p>
+                      <div id = "Song selection">
+<!--<div style = "float:left;display:inline">-->
+                        <select id = "myselectform2" onchange="songChange()">
+                        <option value = "1">Clair de Lune</option>
+                        <option value = "2">Ride of the Valkyries</option>
+                        <option value = "3">Fanatasie Op.66</option>
+                        </select>
+                    </div>
+               
+                <p>Midi Note Filter</p>
+                    <div id ="Midi" class ="slider-range"></div>
+                    <label for = "midiAmount">Midi Note range: </label>
+                    <input type = "text" id = "midiAmount" readonly style = "border: 0; color: #f6931f; font-weight: bold;">
+                  
+    <!--create the dropdown here-->
+                    <p>Note Selection</p>
+                      <div id = "Note filters">
+<!--<div style = "float:left;display:inline">-->
+                        <select id = "myselectform" onchange="midiChange()">
+                        <option value = "All">all</option>
+                        <option value = "A">A</option>
+                        <option value = "A#">A#</option>
+                        <option value = "B">B#</option>
+                        <option value = "C">C</option>
+                        <option value = "C#">C#</option>
+                        <option value = "D">D</option>
+                        <option value = "D#">D#</option>
+                        <option value = "E">E</option>
+                        <option value = "F">F</option>
+                        <option value = "F#">F#</option>
+                        <option value = "G">G</option>
+                        <option value = "G#">G#</option>
+                        </select>
+                    </div>
+                </div> 
+          <button onclick="play()">Play</button>
+          <button onclick="stop()">Stop</button>
+          </div>
+     </div>
+
+ <script src="ScrollingScore copy.js"></script>
+
+</body>
+
+</html>
